@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "110896045662",
+    "project_id": "parakram-24",
+    "storage_bucket": "parakram-24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110896045662:android:b15011cbf13c8f574d9ecf",
+        "android_client_info": {
+          "package_name": "com.explore.parakram24"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpoBZRubgWZg-kZuZXg7tXHxMInmryvwc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

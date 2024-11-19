@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_activity_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.explore.parakram24.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.explore.parakram24.fragments.AboutUsFragment"
+        android:label="Aout US"
+        tools:layout="@layout/fragment_about_us"/>
+
+    <fragment
+        android:id="@+id/sponsorsFragment"
+        android:name="com.explore.parakram24.fragments.SponsorsFragment"
+        android:label="Sponsors"
+        tools:layout="@layout/rv_item_sponsor"/>
+
+    <fragment
+        android:id="@+id/merchandiseFragment"
+        android:name="com.explore.parakram24.fragments.MerchandiseFragment"
+        android:label="Merchandise"
+        tools:layout="@layout/fragment_merchandise"/>
+
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.explore.parakram24.fragments.EventsFragment"
+        android:label="Events"
+        tools:layout="@layout/fragment_events">
+        <action
+            android:id="@+id/eventToindiEvent"
+            app:destination="@id/indiEventFragment"
+            app:enterAnim="@anim/fragment_enter"
+            app:exitAnim="@anim/fragment_exit"
+            />
+        <action
+            android:id="@+id/eventToEditableEvent"
+            app:destination="@id/EditableIndividualEventFragment"
+            app:enterAnim="@anim/fragment_enter"
+            app:exitAnim="@anim/fragment_exit"
+            />
+        <argument
+            android:name="fragment"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/indiEventFragment"
+        android:name="com.explore.parakram24.fragments.IndividualEventFragment"
+        android:label="Event"
+        tools:layout="@layout/fragment_individual_event">
+        <argument
+            android:name="fragment"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coreTeamFragment"
+        android:name="com.explore.parakram24.fragments.CoreTeamFragment"
+        android:label="CoreTeam"
+        tools:layout="@layout/fragment_core_team"/>
+
+
+    <fragment
+        android:id="@+id/EditableIndividualEventFragment"
+        android:name="com.explore.parakram24.fragments.EditableIndividualEventFragment"
+        android:label="Editable Event"
+        tools:layout="@layout/fragment_editable_individual_event">
+        <argument
+            android:name="fragment"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.explore.parakram24.fragments.NotificationFragment"
+        android:label="notification"
+        tools:layout="@layout/fragment_notification"
+        />
+
+    <fragment
+        android:id="@+id/announcementFragment"
+        android:name="com.explore.parakram24.fragments.AnnouncementFragment"
+        android:label="Announcements"
+        tools:layout="@layout/fragment_announcement"/>
+
+</navigation>

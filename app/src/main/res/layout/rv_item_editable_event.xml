@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.cardview.CircularRevealCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:id="@+id/rv_events_card"
+    android:backgroundTint="@color/transparent"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/et_cl_event"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/et_btn_update"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_write"
+            android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/et_ll_score"
+            app:layout_constraintEnd_toEndOf="@id/et_venue"
+            app:layout_constraintStart_toStartOf="@id/et_venue"
+            app:layout_constraintTop_toBottomOf="@id/et_venue" />
+
+        <!--        <ImageButton-->
+        <!--            android:layout_width="50dp"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:src=""-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            android:elevation="1dp"-->
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_league"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="FINAL"
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/et_team1Image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_league"
+            app:shapeAppearance="@style/CornerCut" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_team1name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@color/transparent"
+            android:text="TEAMA"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxWidth="120dp"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/et_ll_score"
+            app:layout_constraintEnd_toEndOf="@id/et_team1Image"
+            app:layout_constraintStart_toStartOf="@id/et_team1Image"
+            app:layout_constraintTop_toBottomOf="@id/et_team1Image" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/et_team2Image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_league"
+            app:shapeAppearance="@style/CornerCut" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_team2name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@color/transparent"
+            android:text="TEAMB"
+            android:textSize="14dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxWidth="120dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/et_team2Image"
+            app:layout_constraintStart_toStartOf="@id/et_team2Image"
+            app:layout_constraintTop_toBottomOf="@id/et_team2Image" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:text="Date : 03/02/2024 "
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/et_time"
+            app:layout_constraintEnd_toEndOf="@+id/et_team2Image"
+            app:layout_constraintStart_toStartOf="@id/et_team1Image"
+            app:layout_constraintTop_toBottomOf="@+id/et_league" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:text="TIME : 8:00AM "
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/et_team2Image"
+            app:layout_constraintStart_toStartOf="@+id/et_team1Image"
+            app:layout_constraintTop_toBottomOf="@+id/et_date" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_vs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Vs"
+            android:textSize="50dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/et_venue"
+            app:layout_constraintEnd_toEndOf="@+id/et_team2Image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_time" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="VENUE : SAC "
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/et_team2Image"
+            app:layout_constraintEnd_toEndOf="@id/et_team2Image"
+            app:layout_constraintStart_toStartOf="@id/et_team1Image" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/et_ll_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="Score:"
+                android:textSize="20dp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_remove_24" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_tv_scoreA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="210" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_add_24" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:text="Runs"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_remove_24" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_tv_scoreB"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:text="20" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_add_24" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_remove_24" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_tv_wicketsA"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:background="@color/transparent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="2/10" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_add_24" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:text="Wickets(10)"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_remove_24" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_tv_wicketsB"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:textColor="@color/white"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:text="2" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/baseline_add_24" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.circularreveal.cardview.CircularRevealCardView>

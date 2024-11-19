@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    tools:ignore="hardcodedText">
+
+    <item android:title="Main Section">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/homeFragment"
+                    android:icon="@drawable/ic_home"
+                    android:title="Home" />
+
+                <item android:id="@+id/eventsFragment"
+                    android:icon="@drawable/ic_events"
+                    android:title="Events" />
+
+
+                <item android:id="@+id/merchandiseFragment"
+                    android:icon="@drawable/ic_merchandise"
+                    android:title="Merchandise" />
+
+                <item android:id="@+id/sponsorsFragment"
+                    android:icon="@drawable/ic_sponsors"
+                    android:title="Sponsors" />
+
+                <item
+                    android:id="@+id/announcementFragment"
+                    android:icon="@drawable/ic_announcement"
+                    android:title="Announcements"/>
+
+<!--                <item-->
+<!--                    android:id="@+id/notificationFragment"-->
+<!--                    android:icon="@drawable/ic_profile"-->
+<!--                    android:title="send notification"/>-->
+
+
+
+<!--                <item android:id="@+id/singleEventFragment"-->
+<!--                    android:icon="@drawable/ic_events"-->
+<!--                    android:title="Event"-->
+<!--                    android:visible="false"/>-->
+
+<!--                <item android:id="@+id/announcementsFragment"-->
+<!--                    android:icon="@drawable/ic_announcement"-->
+<!--                    android:title="Announcements" />-->
+
+
+
+<!--                <item android:id="@+id/plansFragmentDrawer"-->
+<!--                    android:icon="@drawable/ic_plans"-->
+<!--                    android:title="Plans" />-->
+
+<!--                <item android:id="@+id/profileFragment"-->
+<!--                    android:icon="@drawable/ic_person"-->
+<!--                    android:title="Profile" />-->
+
+            </group>
+
+        </menu>
+
+    </item>
+
+
+
+    <!--    <item android:title="Admin Section"-->
+    <!--        android:visible="true">-->
+
+    <!--        <menu>-->
+
+    <!--            <group android:checkableBehavior="single">-->
+
+    <!--                <item android:id="@+id/addAnnouncementFragment"-->
+    <!--                    android:icon="@drawable/ic_write"-->
+    <!--                    android:title="New Announcement" />-->
+
+    <!--                <item android:id="@+id/qrScanFragment"-->
+    <!--                    android:icon="@drawable/ic_qr"-->
+    <!--                    android:title="Scan Qr" />-->
+    <!--            </group>-->
+
+    <!--        </menu>-->
+
+    <!--    </item>-->
+
+
+    <item android:title="Support Section">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/aboutUsFragment"
+                    android:icon="@drawable/ic_about_us"
+                    android:title="About Us" />
+
+                <item android:id="@+id/coreTeamFragment"
+                    android:icon="@drawable/ic_team"
+                    android:title="Core Team" />
+
+<!--                <item android:id="@+id/contactFragment"-->
+<!--                    android:icon="@drawable/ic_contact"-->
+<!--                    android:title="Contact Us" />-->
+
+            </group>
+
+        </menu>
+
+    </item>
+
+</menu>

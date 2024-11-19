@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/uc_et_cl_event"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="8dp">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/uc_et_league"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:hint="FINAL"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/uc_et_team1Image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uc_et_league"
+        app:shapeAppearance="@style/CornerCut" />
+
+    <Spinner
+        android:id="@+id/uc_et_team1name"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/uc_ll_score"
+        app:layout_constraintEnd_toEndOf="@id/uc_et_team1Image"
+        app:layout_constraintStart_toStartOf="@id/uc_et_team1Image"
+        app:layout_constraintTop_toBottomOf="@id/uc_et_team1Image" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/uc_et_team2Image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uc_et_league"
+        app:shapeAppearance="@style/CornerCut" />
+
+    <Spinner
+        android:id="@+id/uc_et_team2name"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="4dp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/uc_ll_score"
+        app:layout_constraintEnd_toEndOf="@id/uc_et_team2Image"
+        app:layout_constraintStart_toStartOf="@id/uc_et_team2Image"
+        app:layout_constraintTop_toBottomOf="@id/uc_et_team2Image" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/uc_et_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/transparent"
+        android:hint="03/02/2024 "
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/uc_et_time"
+        app:layout_constraintEnd_toEndOf="@+id/uc_et_team2Image"
+        app:layout_constraintStart_toStartOf="@id/uc_et_team1Image"
+        app:layout_constraintTop_toBottomOf="@+id/uc_et_league" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/uc_et_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/transparent"
+        android:hint="8:00AM "
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/uc_et_team2Image"
+        app:layout_constraintStart_toStartOf="@+id/uc_et_team1Image"
+        app:layout_constraintTop_toBottomOf="@+id/uc_et_date" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/uc_tv_vs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Vs"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/uc_et_venue"
+        app:layout_constraintEnd_toEndOf="@+id/uc_et_team2Image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uc_et_time" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/uc_et_venue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:hint="SAC"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/uc_et_team2Image"
+        app:layout_constraintEnd_toEndOf="@id/uc_et_team2Image"
+        app:layout_constraintStart_toStartOf="@id/uc_et_team1Image" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/uc_ll_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uc_et_venue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Score:"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/uc_ll_field1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/uc_tv_leftField1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="field1" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/uc_tv_field1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="Runs"
+                android:textSize="16sp" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/uc_tv_rightField1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="20" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/uc_ll_field2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/uc_tv_leftField2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="field2" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/uc_tv_field2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="Runs"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/uc_tv_rightField2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="20" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/uc_ll_field3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/uc_tv_leftField3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="field1" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/uc_tv_field3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="Runs"
+                android:textSize="16sp" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/uc_tv_rightField3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:hint="20" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Cancel"
+                android:id="@+id/btn_cancel" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Delete"
+                android:id="@+id/btn_delete" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Update"
+                android:id="@+id/btn_update" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="250dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
